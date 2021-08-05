@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @AllArgsConstructor
 @RequestMapping("api/data")
-@CrossOrigin(allowedHeaders = "*",allowCredentials = "*")
+@CrossOrigin(origins = "*",allowedHeaders = "*")
 public class DataController {
 
     private final DataRepository dataRepository;
