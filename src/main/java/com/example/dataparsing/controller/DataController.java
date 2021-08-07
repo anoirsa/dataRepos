@@ -42,9 +42,13 @@ public class DataController {
     }
 
     @GetMapping("/wind_on")
-    public String getWindOn() {
-        return dataRepository.getWindOn().toString();
-    }
+    public String getWindOn() {return dataRepository.getWindOn().toString();}
+
+    @GetMapping("/ai_1")
+    public String getAiFirstVersion() {return dataRepository.getAiFirstVersion().toString();}
+    @GetMapping("/ai_2")
+    public String getAiSecondVersion() {return dataRepository.getAiSecondVersion().toString();}
+
 
 
 

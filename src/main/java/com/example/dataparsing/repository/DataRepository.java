@@ -14,6 +14,9 @@ public class DataRepository {
     private final JSONArray TEMP_DB;
     private final JSONArray WIND_OFF_SHORE;
     private final JSONArray ON_SHORE;
+    private final JSONArray AI_I;
+    private final JSONArray AI_II;
+
 
     public DataRepository() {
         this.CARBON_DB = DataHelperRepos.getData("csvfiles/bankenergi/carbon_intensity.csv");
@@ -22,6 +25,9 @@ public class DataRepository {
         this.TEMP_DB = DataHelperRepos.getData("csvfiles/bankenergi/weather.csv");
         this.WIND_OFF_SHORE = DataHelperRepos.getData("csvfiles/bankenergi/wind_offshore.csv");
         this.ON_SHORE = DataHelperRepos.getData("csvfiles/bankenergi/wind_onshore.csv");
+        this.AI_I = DataHelperRepos.getData("csvfiles/ai_model/AI_model.csv");
+        this.AI_II = DataHelperRepos.getData("csvfiles/ai_model/AI2.csv");
+
     }
     public JSONArray getCarbonIntensity() {
         return CARBON_DB;
@@ -40,5 +46,11 @@ public class DataRepository {
     }
     public  JSONArray getWindOn() {
         return ON_SHORE;
+    }
+    public JSONArray getAiFirstVersion() {
+        return  AI_I;
+    }
+    public JSONArray getAiSecondVersion() {
+        return AI_II;
     }
 }
